@@ -1,26 +1,89 @@
 @import "tailwindcss";
 
+/* ── Brand tokens ─────────────────────────────────────────────────────
+   Palette: blue-tinted near-black + one electric "ice blue" accent.
+   The page deliberately tells a two-act color story:
+   Act 1 (hero) = dark, Act 2 (camera reveal) = white studio. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ink: #070a10; /* hero background, blue-tinted near-black (not pure #000) */
+  --ink-soft: #0d121c; /* raised dark surface */
+  --ink-ghost: #161d2b; /* dim ghost type behind the name */
+  --paper: #ffffff; /* camera section background */
+  --accent: #5bc4e8; /* brand sky-cyan, taken from the KV logo */
+  --accent-soft: rgba(91, 196, 232, 0.16);
+  --accent-glow: rgba(91, 196, 232, 0.45);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-ghost: var(--ink-ghost);
+  --color-paper: var(--paper);
+  --color-accent: var(--accent);
+
+  --font-display: var(--font-sora);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-logo: var(--font-montserrat);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  background: var(--ink);
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--ink);
+  color: #ededed;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Ghost / fill layers for the kinetic name reveal */
+.name-ghost {
+  color: var(--ink-ghost);
+}
+.name-fill {
+  color: #ffffff;
+}
+
+/* Outline ("empty letter") type for the About reveal. The white fill
+   copy is layered on top and clip-wiped in. */
+.txt-outline-lg {
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.62);
+  paint-order: stroke fill;
+}
+.txt-outline-sm {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.42);
+  paint-order: stroke fill;
+}
+
+/* Client logo marquee — track holds the list twice; -50% loops seamlessly */
+@keyframes kv-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.kv-marquee-track {
+  width: max-content;
+  animation: kv-marquee 38s linear infinite;
+}
+.kv-marquee:hover .kv-marquee-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .kv-marquee-track {
+    animation: none;
+  }
 }
