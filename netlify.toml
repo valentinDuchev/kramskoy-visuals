@@ -1,0 +1,11 @@
+# Tells Netlify to build with the official Next.js runtime so the App Router
+# pages and the /api/contact route handler are served (not just static files).
+[build]
+  command = "next build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
