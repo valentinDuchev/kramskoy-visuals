@@ -2,18 +2,9 @@
 
 import { useI18n } from "../i18n/I18nProvider";
 
-// Invented client wordmarks paired with simple geometric marks. Swap for
-// real names (and real SVG logos) once Ivan's client list is confirmed.
-const CLIENTS = [
-  "Lumen Studio",
-  "Halden Coffee",
-  "Northsound Records",
-  "Atlas & Co",
-  "Veritas Films",
-  "Kestrel Aero",
-  "Ember Hospitality",
-  "Tideline Surf",
-];
+// Real clients Ivan works with, paired with simple geometric marks. Swap the
+// marks for real SVG logos once they're available.
+const CLIENTS = ["Bayer", "Agredo", "Hevesh 5", "Dutch Domino Team"];
 
 function Glyph({ index }: { index: number }) {
   const cls = "h-5 w-5 shrink-0 text-white/35";

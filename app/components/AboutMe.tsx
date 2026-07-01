@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useI18n } from "../i18n/I18nProvider";
@@ -113,7 +113,7 @@ export function AboutMe() {
 
             <div className="about-meta shrink-0 pt-3 md:pt-6" style={{ opacity: 0 }}>
               <a
-                href="#story"
+                href="#about-more"
                 className="inline-flex items-center rounded-full border border-white/25 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/80 transition-colors duration-300 hover:border-white hover:text-white"
               >
                 {t.about.readStory}
@@ -154,46 +154,7 @@ export function AboutMe() {
             <span>{t.common.rights}</span>
           </div>
         </div>
-
-        {/* Portrait — stands in front of the body copy, like the reference. */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex justify-center">
-          <AboutPortrait />
-        </div>
       </div>
     </section>
-  );
-}
-
-/** Same swap-in convention as the hero: drop public/portrait.png. */
-function AboutPortrait() {
-  const [loaded, setLoaded] = useState(false);
-  const [failed, setFailed] = useState(false);
-
-  return (
-    <div className="relative flex h-[58vh] max-h-[620px] w-auto items-end">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="/portrait.png"
-        alt="Kramskoy"
-        onLoad={() => setLoaded(true)}
-        onError={() => setFailed(true)}
-        className={`h-full w-auto object-contain object-bottom transition-opacity duration-700 ${
-          loaded ? "opacity-100" : "opacity-0"
-        }`}
-      />
-      {failed && (
-        <div className="absolute inset-0 flex items-end justify-center">
-          <div
-            className="flex aspect-[3/4] h-full max-w-[70vw] items-end justify-center rounded-t-[45%] border border-white/10 pb-8"
-            style={{
-              background:
-                "linear-gradient(to top, var(--accent-soft) 0%, rgba(255,255,255,0.02) 55%, transparent 100%)",
-            }}
-          >
-            <span className="font-mono text-[10px] text-white/25">drop public/portrait.png</span>
-          </div>
-        </div>
-      )}
-    </div>
   );
 }

@@ -114,10 +114,14 @@ export function HeroName() {
         </motion.div>
       </div>
 
-      {/* ── Portrait layer (z-20): sits IN FRONT of the name ── */}
+      {/* ── Portrait layer (z-20): sits IN FRONT of the name. Disabled until a
+          transparent cutout portrait exists. To re-enable: uncomment this block
+          and the Portrait component at the bottom of the file, then drop
+          public/portrait.png. ──
       <div className="absolute inset-x-0 bottom-0 z-20 flex justify-center">
         <Portrait delayed={!reduce} />
       </div>
+      */}
 
       {/* ── Roles (z-30): fade up after the fill completes ── */}
       <motion.ul
@@ -165,10 +169,11 @@ function itemVariants(reduce: boolean | null): Variants {
 }
 
 /**
- * Placeholder portrait. Drop a transparent cutout PNG at `public/portrait.png`
- * (Kramskoy, full/half body, no background) and it renders automatically.
- * Until then a labeled placeholder stands in so the layering reads correctly.
+ * Portrait layer — disabled (see the commented-out usage in the hero above).
+ * Drop a transparent cutout PNG at `public/portrait.png` (Kramskoy, full/half
+ * body, no background) and re-enable both this and its usage to bring it back.
  */
+/* eslint-disable-next-line @typescript-eslint/no-unused-vars */
 function Portrait({ delayed }: { delayed: boolean }) {
   const [loaded, setLoaded] = useState(false);
   const [failed, setFailed] = useState(false);

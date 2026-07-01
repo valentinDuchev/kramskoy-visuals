@@ -9,8 +9,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 // ─── Tunable knobs ──────────────────────────────────────────────────────
 const SECTION_BG = "#ffffff"; // white studio backdrop, matches the Kling render
-const SECTION_VH = 300; // section height in svh; sticky range = SECTION_VH - sticky height
-const SCROLL_DURATION_PCT = 200; // scroll length the frame animation plays across
+const SECTION_VH = 200; // section height in svh; sticky range = SECTION_VH - sticky height
+const SCROLL_DURATION_PCT = 110; // scroll length the frame animation plays across (shortened per client feedback: full reveal now takes ~1.5 scrolls on desktop instead of ~3)
 const ZOOM = 0.85; // contain-fit zoom; <1 leaves white margin, >1 crops
 const DARK_OVERLAY_MAX = 0; // no scrim — the studio frames are already clean
 const NAV_H = 72; // must match Navbar NAV_H

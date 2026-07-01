@@ -21,13 +21,12 @@ type WorkItem = {
 const ytThumb = (id: string) => `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`;
 
 const WORK: WorkItem[] = [
-  { id: "w1", title: "Northbound", youtubeId: "aqz-KE-bpKQ", thumb: "https://picsum.photos/seed/kv-northbound/1280/720", span: "md:col-span-2 lg:col-span-7" },
-  { id: "w2", title: "Atelier No. 4", youtubeId: "aqz-KE-bpKQ", thumb: "https://picsum.photos/seed/kv-atelier/1280/720", span: "lg:col-span-5" },
-  { id: "w3", title: "Salt & Static", youtubeId: "aqz-KE-bpKQ", thumb: "https://picsum.photos/seed/kv-saltstatic/1280/720", span: "lg:col-span-5" },
-  { id: "w4", title: "The Long Room", youtubeId: "aqz-KE-bpKQ", thumb: "https://picsum.photos/seed/kv-longroom/1280/720", span: "lg:col-span-7" },
-  { id: "w5", title: "First Light", youtubeId: "aqz-KE-bpKQ", thumb: "https://picsum.photos/seed/kv-firstlight/1280/720", span: "lg:col-span-4" },
-  { id: "w6", title: "Holloway", youtubeId: "aqz-KE-bpKQ", thumb: "https://picsum.photos/seed/kv-holloway/1280/720", span: "lg:col-span-4" },
-  { id: "w7", title: "Quiet Engine", youtubeId: "aqz-KE-bpKQ", thumb: "https://picsum.photos/seed/kv-quietengine/1280/720", span: "lg:col-span-4" },
+  {
+    id: "w1",
+    title: "One Million Ahead — WDC 2024",
+    youtubeId: "m5VtyttodNg",
+    span: "md:col-span-2 lg:col-span-12",
+  },
 ];
 
 export function Work() {
