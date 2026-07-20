@@ -1,14 +1,50 @@
 "use client";
 
-import { YoutubeLogo, InstagramLogo, FilmSlate, ArrowUp } from "@phosphor-icons/react";
+import {
+  YoutubeLogo,
+  InstagramLogo,
+  WhatsappLogo,
+  EnvelopeSimple,
+  ArrowUpRight,
+  ArrowUp,
+} from "@phosphor-icons/react";
 import { useI18n } from "../i18n/I18nProvider";
 
-// Placeholder handles/links — swap for Ivan's real accounts.
-// (Phosphor has no Vimeo logo, so Vimeo uses a generic film glyph.)
+export const EMAIL = "kramskoy.visuals@gmail.com";
+// wa.me wants the number bare — no +, spaces or dashes.
+const WHATSAPP = "32496468041";
+
+// `handle` is the muted right-hand column; it's what the row is worth showing
+// beyond the platform name, so keep it short enough not to wrap on mobile.
 const SOCIAL = [
-  { label: "YouTube", href: "https://youtube.com/@kramskoyvisuals", Icon: YoutubeLogo },
-  { label: "Instagram", href: "https://instagram.com/kramskoyvisuals", Icon: InstagramLogo },
-  { label: "Vimeo", href: "https://vimeo.com/kramskoyvisuals", Icon: FilmSlate },
+  {
+    label: "Instagram",
+    handle: "@kramskoy.visuals",
+    href: "https://www.instagram.com/kramskoy.visuals/",
+    Icon: InstagramLogo,
+    external: true,
+  },
+  {
+    label: "YouTube",
+    handle: "@ivan.kramskoy",
+    href: "https://www.youtube.com/@ivan.kramskoy",
+    Icon: YoutubeLogo,
+    external: true,
+  },
+  {
+    label: "WhatsApp",
+    handle: "+32 496 46 80 41",
+    href: `https://wa.me/${WHATSAPP}`,
+    Icon: WhatsappLogo,
+    external: true,
+  },
+  {
+    label: "Email",
+    handle: EMAIL,
+    href: `mailto:${EMAIL}`,
+    Icon: EnvelopeSimple,
+    external: false,
+  },
 ];
 
 // Hrefs line up by index with t.footer.nav / t.footer.legal.
@@ -39,35 +75,59 @@ export function Footer() {
           </a>
         </div>
 
+        {/* Social rows — sized off the wordmark above so the two read as one
+            block. Each row is a full-width target, which is also what makes
+            the WhatsApp and email rows comfortable to tap on a phone. */}
+        <div className="pt-10">
+          <h2 className="mb-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-accent/70">
+            {t.footer.cols.elsewhere}
+          </h2>
+          {SOCIAL.map(({ label, handle, href, Icon, external }) => (
+            <a
+              key={label}
+              href={href}
+              {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
+              aria-label={`${label} — ${handle}`}
+              className="group flex items-center justify-between gap-6 border-b border-white/10 py-5 transition-colors hover:bg-white/[0.03] md:py-6"
+            >
+              <span className="flex min-w-0 items-center gap-4 md:gap-6">
+                <Icon
+                  weight="fill"
+                  className="h-5 w-5 shrink-0 text-white/40 transition-colors group-hover:text-accent md:h-6 md:w-6"
+                />
+                <span className="font-display text-2xl font-extrabold leading-none tracking-[-0.02em] text-white/70 transition-colors group-hover:text-white md:text-4xl">
+                  {label}
+                </span>
+              </span>
+              <span className="flex shrink-0 items-center gap-4">
+                {/* Handles are supporting detail — dropped on the narrowest
+                    screens rather than allowed to squeeze the platform name. */}
+                <span className="hidden text-sm text-white/35 transition-colors group-hover:text-white/60 sm:block">
+                  {handle}
+                </span>
+                <ArrowUpRight
+                  weight="bold"
+                  className="h-4 w-4 text-white/30 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white md:h-5 md:w-5"
+                />
+              </span>
+            </a>
+          ))}
+        </div>
+
         {/* Columns */}
-        <div className="grid grid-cols-2 gap-10 py-12 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-10 py-12 md:grid-cols-3">
           <FooterCol title={t.footer.cols.navigate}>
             {NAV_HREFS.map((href, i) => (
               <FooterLink key={href} href={href} label={t.footer.nav[i]} />
             ))}
           </FooterCol>
 
-          <FooterCol title={t.footer.cols.elsewhere}>
-            {SOCIAL.map(({ label, href, Icon }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2.5 text-sm text-white/55 transition-colors hover:text-white"
-              >
-                <Icon weight="fill" className="h-4 w-4" />
-                {label}
-              </a>
-            ))}
-          </FooterCol>
-
           <FooterCol title={t.footer.cols.contact}>
             <a
-              href="mailto:hello@kramskoyvisuals.com"
+              href="mailto:kramskoy.visuals@gmail.com"
               className="text-sm text-white/55 transition-colors hover:text-white"
             >
-              hello@kramskoyvisuals.com
+              kramskoy.visuals@gmail.com
             </a>
             <span className="text-sm text-white/40">{t.footer.travel}</span>
           </FooterCol>
@@ -80,8 +140,24 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-8 text-[12px] uppercase tracking-[0.14em] text-white/40">
+        <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-4 border-t border-white/10 pt-8 text-[12px] uppercase tracking-[0.14em] text-white/40">
           <span>© 2026 Kramskoy Visuals</span>
+
+          {/* Agency credit — dark logo sits on a light pill so it stays legible. */}
+          <a
+            href="https://invenios.dev"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Powered by Invenios — invenios.dev"
+            className="group order-last inline-flex w-full items-center justify-center gap-2.5 normal-case tracking-normal text-white/45 transition-colors hover:text-white/80 sm:order-none sm:w-auto"
+          >
+            <span>Powered by</span>
+            <span className="inline-flex items-center rounded-md bg-white px-2 py-1.5 transition-transform group-hover:-translate-y-0.5">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/invenios.png" alt="Invenios" className="h-auto w-[78px]" />
+            </span>
+          </a>
+
           <span>{t.common.rights}</span>
         </div>
       </div>

@@ -154,7 +154,7 @@ const jsonLd = {
   description: DESCRIPTION,
   url: SITE_URL,
   image: `${SITE_URL}/hero_poster.jpg`,
-  email: "hello@kramskoyvisuals.com",
+  email: "kramskoy.visuals@gmail.com",
   founder: { "@type": "Person", name: "Ivan" },
   areaServed: "Worldwide",
   knowsAbout: [
@@ -168,10 +168,10 @@ const jsonLd = {
     "Film direction",
   ],
   sameAs: [
-    "https://youtube.com/@kramskoyvisuals",
-    "https://instagram.com/kramskoyvisuals",
-    "https://vimeo.com/kramskoyvisuals",
+    "https://www.instagram.com/kramskoy.visuals/",
+    "https://www.youtube.com/@ivan.kramskoy",
   ],
+  telephone: "+32496468041",
 };
 
 export default function RootLayout({

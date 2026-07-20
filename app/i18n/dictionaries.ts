@@ -236,7 +236,7 @@ export const en = {
     privacy: {
       title: "Privacy Policy",
       intro:
-        "Kramskoy Visuals (“I”, “me”) respects your privacy. This policy explains what I collect when you use this site or get in touch, and what I do with it. For anything unclear, email [hello@kramskoyvisuals.com](mailto:hello@kramskoyvisuals.com).",
+        "Kramskoy Visuals (“I”, “me”) respects your privacy. This policy explains what I collect when you use this site or get in touch, and what I do with it. For anything unclear, email [kramskoy.visuals@gmail.com](mailto:kramskoy.visuals@gmail.com).",
       sections: [
         {
           heading: "What I collect",
@@ -268,7 +268,7 @@ export const en = {
         },
         {
           heading: "Changes & contact",
-          body: "I may update this policy; the date above shows the latest version. Questions go to [hello@kramskoyvisuals.com](mailto:hello@kramskoyvisuals.com).",
+          body: "I may update this policy; the date above shows the latest version. Questions go to [kramskoy.visuals@gmail.com](mailto:kramskoy.visuals@gmail.com).",
         },
       ],
     },
@@ -307,7 +307,7 @@ export const en = {
         },
         {
           heading: "Changes & contact",
-          body: "I may update these terms; the date above shows the latest version. Questions go to [hello@kramskoyvisuals.com](mailto:hello@kramskoyvisuals.com).",
+          body: "I may update these terms; the date above shows the latest version. Questions go to [kramskoy.visuals@gmail.com](mailto:kramskoy.visuals@gmail.com).",
         },
       ],
     },
@@ -330,7 +330,7 @@ export const en = {
         },
         {
           heading: "Changes & contact",
-          body: "I may update this policy; the date above shows the latest version. Questions go to [hello@kramskoyvisuals.com](mailto:hello@kramskoyvisuals.com).",
+          body: "I may update this policy; the date above shows the latest version. Questions go to [kramskoy.visuals@gmail.com](mailto:kramskoy.visuals@gmail.com).",
         },
       ],
     },
@@ -561,7 +561,7 @@ export const bg: Dict = {
     privacy: {
       title: "Политика за поверителност",
       intro:
-        "Kramskoy Visuals („аз“, „мен“) зачита вашата поверителност. Тази политика обяснява какво събирам, когато използвате този сайт или се свържете с мен, и какво правя с него. За всичко неясно, пишете на [hello@kramskoyvisuals.com](mailto:hello@kramskoyvisuals.com).",
+        "Kramskoy Visuals („аз“, „мен“) зачита вашата поверителност. Тази политика обяснява какво събирам, когато използвате този сайт или се свържете с мен, и какво правя с него. За всичко неясно, пишете на [kramskoy.visuals@gmail.com](mailto:kramskoy.visuals@gmail.com).",
       sections: [
         {
           heading: "Какво събирам",
@@ -593,7 +593,7 @@ export const bg: Dict = {
         },
         {
           heading: "Промени и контакт",
-          body: "Мога да актуализирам тази политика; датата по-горе показва най-новата версия. Въпроси изпращайте на [hello@kramskoyvisuals.com](mailto:hello@kramskoyvisuals.com).",
+          body: "Мога да актуализирам тази политика; датата по-горе показва най-новата версия. Въпроси изпращайте на [kramskoy.visuals@gmail.com](mailto:kramskoy.visuals@gmail.com).",
         },
       ],
     },
@@ -632,7 +632,7 @@ export const bg: Dict = {
         },
         {
           heading: "Промени и контакт",
-          body: "Мога да актуализирам тези условия; датата по-горе показва най-новата версия. Въпроси изпращайте на [hello@kramskoyvisuals.com](mailto:hello@kramskoyvisuals.com).",
+          body: "Мога да актуализирам тези условия; датата по-горе показва най-новата версия. Въпроси изпращайте на [kramskoy.visuals@gmail.com](mailto:kramskoy.visuals@gmail.com).",
         },
       ],
     },
@@ -655,7 +655,7 @@ export const bg: Dict = {
         },
         {
           heading: "Промени и контакт",
-          body: "Мога да актуализирам тази политика; датата по-горе показва най-новата версия. Въпроси изпращайте на [hello@kramskoyvisuals.com](mailto:hello@kramskoyvisuals.com).",
+          body: "Мога да актуализирам тази политика; датата по-горе показва най-новата версия. Въпроси изпращайте на [kramskoy.visuals@gmail.com](mailto:kramskoy.visuals@gmail.com).",
         },
       ],
     },

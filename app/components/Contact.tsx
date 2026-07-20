@@ -5,9 +5,8 @@ import { motion, useReducedMotion } from "motion/react";
 import { ArrowUpRight, Check } from "@phosphor-icons/react";
 import { useI18n } from "../i18n/I18nProvider";
 import { en } from "../i18n/dictionaries";
-
-// Swap for the real address when known.
-const EMAIL = "hello@kramskoyvisuals.com";
+// Single source of truth — the footer lists the same address in its social rows.
+import { EMAIL } from "./Footer";
 
 export function Contact() {
   const { t } = useI18n();
