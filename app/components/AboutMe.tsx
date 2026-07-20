@@ -95,8 +95,9 @@ export function AboutMe() {
           className="relative mx-auto flex h-full max-w-[1400px] flex-col px-5 md:px-10"
           style={{ paddingTop: NAV_H + 28, paddingBottom: 40 }}
         >
-          {/* Heading row: outline -> white fill, with the story pill */}
-          <div className="flex items-start justify-between gap-6">
+          {/* Heading row: outline -> white fill, with the story pill.
+              Stacks on mobile so the button can't get pushed off-screen. */}
+          <div className="flex flex-col items-start gap-4 sm:flex-row sm:justify-between sm:gap-6">
             <div ref={headWrapRef} className="relative" style={{ opacity: 0 }}>
               <h2 className="txt-outline-lg select-none font-display text-[15vw] font-extrabold leading-[0.85] tracking-[-0.03em] md:text-[min(12vw,20vh)] lg:text-[min(150px,20vh)]">
                 {HEADING}
@@ -144,7 +145,7 @@ export function AboutMe() {
 
           {/* Footer meta row */}
           <div
-            className="about-meta flex items-center justify-between border-t border-white/10 pt-5 text-[11px] uppercase tracking-[0.16em] text-white/35"
+            className="about-meta flex items-center justify-between gap-3 border-t border-white/10 pt-5 text-[10px] uppercase tracking-[0.1em] text-white/35 sm:text-[11px] sm:tracking-[0.16em]"
             style={{ opacity: 0 }}
           >
             <span>© 2026 Kramskoy Visuals</span>

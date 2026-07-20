@@ -106,12 +106,12 @@ export function Footer() {
             target="_blank"
             rel="noreferrer"
             aria-label="Powered by Invenios — invenios.dev"
-            className="group order-last inline-flex w-full items-center justify-center gap-2.5 normal-case tracking-normal text-white/45 transition-colors hover:text-white/80 sm:order-none sm:w-auto"
+            className="group order-last inline-flex w-full items-center justify-center gap-3 normal-case tracking-normal text-white/45 transition-colors hover:text-white/80 sm:order-none sm:w-auto"
           >
-            <span>Powered by</span>
-            <span className="inline-flex items-center rounded-md bg-white px-3 py-2 transition-transform group-hover:-translate-y-0.5">
+            <span className="text-[15px] font-medium md:text-base">Powered by</span>
+            <span className="inline-flex items-center rounded-md bg-white px-2 py-1.5 transition-transform group-hover:-translate-y-0.5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/invenios.png" alt="Invenios" className="h-auto w-[120px] md:w-[140px]" />
+              <img src="/invenios.png" alt="Invenios" className="h-auto w-[76px]" />
             </span>
           </a>
 

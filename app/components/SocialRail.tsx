@@ -4,65 +4,38 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { SOCIALS } from "../socials";
 
-// A floating rail of social links that reveals itself for the middle of the
-// page: hidden while the hero fills the screen (so it never sits on the
-// opening footage), and hidden again once the footer scrolls in (whose big
-// social rows would otherwise duplicate it). Desktop = vertical rail pinned
-// right; mobile = a centered pill along the bottom.
+// A floating rail of social links pinned to the right edge, present the whole
+// scroll — hero included. The one place it steps aside is directly over the
+// footer, whose big social rows are the same links, so floating icons on top
+// of them would read as a glitch. Right-edge + vertically centred keeps it
+// clear of the bottom-anchored cookie banner on mobile.
 export function SocialRail() {
-  const [visible, setVisible] = useState(false);
+  const [overFooter, setOverFooter] = useState(false);
 
   useEffect(() => {
-    const hero = document.querySelector<HTMLElement>("main > :first-child");
     const footer = document.querySelector<HTMLElement>("footer");
-    if (!hero || !footer) return;
+    if (!footer) return;
 
-    // Show only when BOTH bookends are out of view. Each observer just records
-    // its element's state; a shared resolver flips the rail from the two.
-    let heroOut = false;
-    let footerOut = true;
-    const resolve = () => setVisible(heroOut && footerOut);
-
-    const heroObs = new IntersectionObserver(
-      ([e]) => {
-        heroOut = !e.isIntersecting;
-        resolve();
-      },
-      // A little breathing room so the rail doesn't flash on right at the seam.
-      { threshold: 0, rootMargin: "-15% 0px 0px 0px" },
-    );
-    const footerObs = new IntersectionObserver(
-      ([e]) => {
-        footerOut = !e.isIntersecting;
-        resolve();
-      },
-      { threshold: 0 },
-    );
-
-    heroObs.observe(hero);
-    footerObs.observe(footer);
-    return () => {
-      heroObs.disconnect();
-      footerObs.disconnect();
-    };
+    const obs = new IntersectionObserver(([e]) => setOverFooter(e.isIntersecting), {
+      threshold: 0,
+    });
+    obs.observe(footer);
+    return () => obs.disconnect();
   }, []);
 
   return (
     <AnimatePresence>
-      {visible && (
-        // Centering lives in Tailwind transforms (-translate-*), so the motion
-        // element animates opacity only — animating x/y here would set an inline
-        // transform that overrides the centering and knock the rail off-axis.
+      {!overFooter && (
+        // Centering lives in the Tailwind -translate-y-1/2 transform, so the
+        // motion element animates opacity only — animating x/y here would set an
+        // inline transform that overrides the centering and knock it off-axis.
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
           aria-label="Social links"
-          // Desktop-only: on mobile the cookie banner owns the bottom-center and
-          // the footer's big social rows already cover reach; a floating rail
-          // there would collide and crowd a small screen.
-          className="fixed right-5 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-2.5 md:flex"
+          className="fixed right-3 top-1/2 z-40 flex -translate-y-1/2 flex-col gap-2 md:right-5 md:gap-2.5"
         >
           {SOCIALS.map(({ label, href, Icon, external }) => (
             <a
@@ -71,11 +44,11 @@ export function SocialRail() {
               {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
               aria-label={label}
               title={label}
-              className="group inline-flex h-11 w-11 items-center justify-center rounded-full
+              className="group inline-flex h-10 w-10 items-center justify-center rounded-full
                 bg-ink/60 text-white/70 ring-1 ring-white/10 backdrop-blur-md transition-all
-                hover:scale-110 hover:bg-accent hover:text-ink"
+                hover:scale-110 hover:bg-accent hover:text-ink md:h-11 md:w-11"
             >
-              <Icon weight="fill" className="h-5 w-5" />
+              <Icon weight="fill" className="h-[18px] w-[18px] md:h-5 md:w-5" />
             </a>
           ))}
         </motion.div>
