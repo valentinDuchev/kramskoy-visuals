@@ -1,51 +1,8 @@
 "use client";
 
-import {
-  YoutubeLogo,
-  InstagramLogo,
-  WhatsappLogo,
-  EnvelopeSimple,
-  ArrowUpRight,
-  ArrowUp,
-} from "@phosphor-icons/react";
+import { ArrowUpRight, ArrowUp } from "@phosphor-icons/react";
 import { useI18n } from "../i18n/I18nProvider";
-
-export const EMAIL = "kramskoy.visuals@gmail.com";
-// wa.me wants the number bare — no +, spaces or dashes.
-const WHATSAPP = "32496468041";
-
-// `handle` is the muted right-hand column; it's what the row is worth showing
-// beyond the platform name, so keep it short enough not to wrap on mobile.
-const SOCIAL = [
-  {
-    label: "Instagram",
-    handle: "@kramskoy.visuals",
-    href: "https://www.instagram.com/kramskoy.visuals/",
-    Icon: InstagramLogo,
-    external: true,
-  },
-  {
-    label: "YouTube",
-    handle: "@ivan.kramskoy",
-    href: "https://www.youtube.com/@ivan.kramskoy",
-    Icon: YoutubeLogo,
-    external: true,
-  },
-  {
-    label: "WhatsApp",
-    handle: "+32 496 46 80 41",
-    href: `https://wa.me/${WHATSAPP}`,
-    Icon: WhatsappLogo,
-    external: true,
-  },
-  {
-    label: "Email",
-    handle: EMAIL,
-    href: `mailto:${EMAIL}`,
-    Icon: EnvelopeSimple,
-    external: false,
-  },
-];
+import { SOCIALS, EMAIL } from "../socials";
 
 // Hrefs line up by index with t.footer.nav / t.footer.legal.
 const NAV_HREFS = ["/", "/#work", "/#services", "/#story", "/#contact"];
@@ -82,7 +39,7 @@ export function Footer() {
           <h2 className="mb-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-accent/70">
             {t.footer.cols.elsewhere}
           </h2>
-          {SOCIAL.map(({ label, handle, href, Icon, external }) => (
+          {SOCIALS.map(({ label, handle, href, Icon, external }) => (
             <a
               key={label}
               href={href}
@@ -124,10 +81,10 @@ export function Footer() {
 
           <FooterCol title={t.footer.cols.contact}>
             <a
-              href="mailto:kramskoy.visuals@gmail.com"
+              href={`mailto:${EMAIL}`}
               className="text-sm text-white/55 transition-colors hover:text-white"
             >
-              kramskoy.visuals@gmail.com
+              {EMAIL}
             </a>
             <span className="text-sm text-white/40">{t.footer.travel}</span>
           </FooterCol>
@@ -152,9 +109,9 @@ export function Footer() {
             className="group order-last inline-flex w-full items-center justify-center gap-2.5 normal-case tracking-normal text-white/45 transition-colors hover:text-white/80 sm:order-none sm:w-auto"
           >
             <span>Powered by</span>
-            <span className="inline-flex items-center rounded-md bg-white px-2 py-1.5 transition-transform group-hover:-translate-y-0.5">
+            <span className="inline-flex items-center rounded-md bg-white px-3 py-2 transition-transform group-hover:-translate-y-0.5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/invenios.png" alt="Invenios" className="h-auto w-[78px]" />
+              <img src="/invenios.png" alt="Invenios" className="h-auto w-[120px] md:w-[140px]" />
             </span>
           </a>
 

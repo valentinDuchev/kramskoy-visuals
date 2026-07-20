@@ -11,6 +11,7 @@ import { Testimonials } from "./components/Testimonials";
 import { LogoMarquee } from "./components/LogoMarquee";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { SocialRail } from "./components/SocialRail";
 
 export default function HomePage() {
   return (
@@ -40,6 +41,8 @@ export default function HomePage() {
         {/* Act 11 — Contact: CTA + form (white) */}
         <Contact />
       </main>
+      {/* Floating social rail — reveals for the mid-page, hides over hero + footer */}
+      <SocialRail />
       {/* Footer (dark) */}
       <Footer />
     </>
