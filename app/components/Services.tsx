@@ -7,10 +7,9 @@ import { useI18n } from "../i18n/I18nProvider";
 
 // Structural data only — images line up by index with t.services.items.
 const SERVICE_IMAGES = [
-  "https://picsum.photos/seed/kv-svc-brand/1280/960",
-  "https://picsum.photos/seed/kv-svc-events/1280/960",
-  "https://picsum.photos/seed/kv-svc-music/1280/960",
-  "https://picsum.photos/seed/kv-svc-photo/1280/960",
+  "/services/documentaries.jpg",
+  "/services/real-estate.jpg",
+  "/services/social-media.jpg",
 ];
 
 export function Services() {

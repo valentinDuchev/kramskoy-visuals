@@ -41,13 +41,33 @@ export const en = {
     ],
     closing: "Let's create the best possible video for you, together.",
   },
+  stills: {
+    heading: "Stills",
+    intro: "On set, behind the camera, and from above.",
+    open: "Open photo",
+    close: "Close photo",
+    prev: "Previous photo",
+    next: "Next photo",
+    // Alt text — lines up by index with STILLS in Stills.tsx.
+    alts: [
+      "Ivan on set with his camera, giving a thumbs up",
+      "Ivan filming on a gimbal",
+      "Filming a domino build on a gimbal",
+      "Interview setup in a sports hall",
+      "Drone shot of a modern residential property",
+      "Ivan filming with headset and shotgun mic",
+      "Ivan operating a Ronin gimbal on location",
+    ],
+  },
   work: {
     heading: "Selected Work",
-    intro: "A recent film. Press play.",
+    intro: "Recent films. Press play.",
     watch: "Watch",
     // Lines up by index with WORK in Work.tsx.
     items: [
       { category: "Documentary", meta: ["Dutch Domino Team", "2024"] },
+      { category: "Reportage", meta: ["Dr. Dani Atanasov", "2026"] },
+      { category: "Real Estate", meta: ["Property film", "2026"] },
     ],
   },
   services: {
@@ -372,12 +392,31 @@ export const bg: Dict = {
     ],
     closing: "Нека създадем възможно най-доброто видео за теб, заедно.",
   },
+  stills: {
+    heading: "Кадри",
+    intro: "На снимачната площадка, зад камерата и от въздуха.",
+    open: "Отвори снимката",
+    close: "Затвори снимката",
+    prev: "Предишна снимка",
+    next: "Следваща снимка",
+    alts: [
+      "Иван на снимачната площадка с камера, вдигнал палец",
+      "Иван снима с гимбал",
+      "Заснемане на домино конструкция с гимбал",
+      "Интервю в спортна зала",
+      "Кадър от дрон на модерен жилищен имот",
+      "Иван снима със слушалки и насочен микрофон",
+      "Иван работи с гимбал Ronin на локация",
+    ],
+  },
   work: {
     heading: "Избрани проекти",
-    intro: "Скорошен филм. Натисни play.",
+    intro: "Скорошни филми. Натисни play.",
     watch: "Гледай",
     items: [
       { category: "Документален филм", meta: ["Dutch Domino Team", "2024"] },
+      { category: "Репортаж", meta: ["Д-р Дани Атанасов", "2026"] },
+      { category: "Недвижими имоти", meta: ["Филм за имот", "2026"] },
     ],
   },
   services: {

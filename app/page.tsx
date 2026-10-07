@@ -3,6 +3,7 @@ import { HeroName } from "./components/HeroName";
 import { ScrollSequence } from "./components/ScrollSequence";
 import { AboutMe } from "./components/AboutMe";
 import { Story } from "./components/Story";
+import { Stills } from "./components/Stills";
 import { Work } from "./components/Work";
 import { Services } from "./components/Services";
 import { Process } from "./components/Process";
@@ -26,6 +27,8 @@ export default function HomePage() {
         <AboutMe />
         {/* Act 4 — Story: long-form bio + real photos (dark) */}
         <Story />
+        {/* Act 4b — Stills: masonry photo gallery + lightbox (white) */}
+        <Stills />
         {/* Act 5 — Work: video gallery + lightbox (dark) */}
         <Work />
         {/* Act 6 — Services: accordion packages with stills (white) */}

@@ -27,6 +27,18 @@ const WORK: WorkItem[] = [
     youtubeId: "m5VtyttodNg",
     span: "md:col-span-2 lg:col-span-12",
   },
+  {
+    id: "w2",
+    title: "Dr. Dani Atanasov",
+    youtubeId: "FQARA257M4Q",
+    span: "lg:col-span-6",
+  },
+  {
+    id: "w3",
+    title: "Real Estate Example #1",
+    youtubeId: "MFWEwWL1Yu4",
+    span: "lg:col-span-6",
+  },
 ];
 
 export function Work() {

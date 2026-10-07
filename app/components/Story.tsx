@@ -65,8 +65,8 @@ export function Story() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/about-1.jpg"
-              alt="Ivan filming on a gimbal"
+              src="/story-1.jpg"
+              alt="Ivan on set with his camera, giving a thumbs up"
               loading="lazy"
               className="aspect-[3/2] w-full object-cover"
             />
@@ -77,8 +77,8 @@ export function Story() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/about-2.jpg"
-              alt="Ivan operating a Ronin gimbal on location"
+              src="/story-2.jpg"
+              alt="Ivan filming with headset and shotgun mic"
               loading="lazy"
               className="aspect-[3/2] w-full object-cover"
             />

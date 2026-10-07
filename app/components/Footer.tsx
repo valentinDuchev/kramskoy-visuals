@@ -82,7 +82,7 @@ export function Footer() {
           <FooterCol title={t.footer.cols.contact}>
             <a
               href={`mailto:${EMAIL}`}
-              className="text-sm text-white/55 transition-colors hover:text-white"
+              className="break-all text-sm text-white/55 transition-colors hover:text-white"
             >
               {EMAIL}
             </a>
