@@ -10,7 +10,7 @@ This rule applies to every task in this repository, without exception.
 
 Never write the em dash (U+2014) or the en dash (U+2013) anywhere in this repository. That covers
 page copy, page titles, meta descriptions, alt text, JSON-LD, emails, translations, code comments,
-docs, commit messages and AI prompts. It also covers their HTML entities (`&mdash;`, `&ndash;`) and
+docs, commit messages and AI prompts. It also covers their HTML entities (`mdash`, `ndash`) and
 escape codes. Clients and their customers read long dashes as a sign of AI-written text.
 
 Use instead:
@@ -28,5 +28,5 @@ Before committing, this must print nothing (tool-managed blocks between `<!-- BE
 `<!-- END:` markers and applied database migrations are the only exceptions):
 
 ```bash
-git grep -nP '(*UTF)\x{2014}|\x{2013}|&mdash;|&ndash;'
+git grep -nIP '(*UTF)\x{2014}|\x{2013}|&[mn]dash;'
 ```
