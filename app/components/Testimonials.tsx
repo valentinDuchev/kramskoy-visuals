@@ -5,7 +5,7 @@ import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
 import { useI18n } from "../i18n/I18nProvider";
 
-// Structural data only — names/initials are not translated.
+// Structural data only - names/initials are not translated.
 const PEOPLE = [
   { id: "t1", name: "Marta Vidović", initials: "MV" },
   { id: "t2", name: "Daniel Roth", initials: "DR" },

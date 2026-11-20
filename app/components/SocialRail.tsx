@@ -5,7 +5,7 @@ import { SOCIALS } from "../socials";
 
 // A floating rail of social links pinned to the right edge. On phone it stays
 // fixed the whole scroll, always visible. On desktop it steps aside over the
-// footer, whose big social rows are the same links — floating icons on top of
+// footer, whose big social rows are the same links - floating icons on top of
 // them there would read as a glitch. Right-edge + vertically centred keeps it
 // clear of the bottom-anchored cookie banner.
 export function SocialRail() {

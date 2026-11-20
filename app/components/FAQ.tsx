@@ -27,7 +27,7 @@ export function FAQ() {
       className="relative w-full bg-paper px-5 py-28 md:px-10 md:py-40"
     >
       <div className="mx-auto grid max-w-[1400px] gap-12 md:grid-cols-[0.85fr_1.15fr] md:gap-20">
-        {/* Left — sticky heading */}
+        {/* Left - sticky heading */}
         <motion.div {...reveal} className="md:sticky md:top-28 md:self-start">
           <h2 className="font-display text-6xl font-extrabold leading-[0.9] tracking-[-0.03em] text-ink md:text-8xl">
             {t.faq.heading}
@@ -42,7 +42,7 @@ export function FAQ() {
           </a>
         </motion.div>
 
-        {/* Right — Q&A list */}
+        {/* Right - Q&A list */}
         <div className="border-t border-ink/12">
           {FAQS.map((f, i) => {
             const on = open === i;

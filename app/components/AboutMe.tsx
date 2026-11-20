@@ -27,7 +27,7 @@ export function AboutMe() {
     // Reduced motion: show the finished, filled state. No scrub.
     if (reduce) {
       gsap.set([headWrapRef.current, bodyWrapRef.current], { opacity: 1, yPercent: 0 });
-      // Heading uses tight leading, so glyph tops/bottoms overflow its box —
+      // Heading uses tight leading, so glyph tops/bottoms overflow its box -
       // bleed the clip past the box (negative insets) so the fill covers them.
       gsap.set(headFillRef.current, { clipPath: "inset(-20% 0 -20% 0)" });
       gsap.set(bodyFillRef.current, { clipPath: "inset(0 0 0% 0)" });

@@ -11,7 +11,7 @@ export function Contact() {
   const { t } = useI18n();
   const reduce = useReducedMotion();
   // typeIdx (not the label) so the selection survives a language switch.
-  // company is a honeypot — kept empty by humans, ignored on the server.
+  // company is a honeypot - kept empty by humans, ignored on the server.
   const [form, setForm] = useState({ name: "", email: "", typeIdx: 0, message: "", company: "" });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [sending, setSending] = useState(false);
@@ -69,7 +69,7 @@ export function Contact() {
       className="relative w-full bg-accent px-5 py-28 md:px-10 md:py-40"
     >
       <div className="mx-auto grid max-w-[1400px] gap-12 md:grid-cols-2 md:gap-20">
-        {/* Left — invitation */}
+        {/* Left - invitation */}
         <motion.div {...reveal}>
           <h2 className="font-display text-6xl font-extrabold leading-[0.9] tracking-[-0.03em] text-ink md:text-8xl">
             {t.contact.heading}
@@ -93,7 +93,7 @@ export function Contact() {
           </div>
         </motion.div>
 
-        {/* Right — form / confirmation */}
+        {/* Right - form / confirmation */}
         <motion.div {...reveal}>
           {sent ? (
             <div className="flex h-full flex-col justify-center">
@@ -117,7 +117,7 @@ export function Contact() {
             </div>
           ) : (
             <form onSubmit={submit} noValidate className="grid gap-7">
-              {/* Honeypot — hidden from users, catches naive bots. */}
+              {/* Honeypot - hidden from users, catches naive bots. */}
               <div aria-hidden className="pointer-events-none absolute left-[-9999px] opacity-0">
                 <label htmlFor="c-company">Company</label>
                 <input
@@ -147,7 +147,7 @@ export function Contact() {
                 placeholder="you@studio.com"
               />
 
-              {/* Project type — pill selector */}
+              {/* Project type - pill selector */}
               <div className="grid gap-2.5">
                 <span className="text-[12px] font-semibold uppercase tracking-[0.16em] text-ink/70">
                   {t.contact.labels.type}

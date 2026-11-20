@@ -6,10 +6,10 @@ import {
   type Icon,
 } from "@phosphor-icons/react";
 
-// Single source of truth for every place Ivan can be reached — the footer
+// Single source of truth for every place Ivan can be reached - the footer
 // social rows, the floating rail, and the contact section all read this.
 export const EMAIL = "kramskoy.visuals@gmail.com";
-// wa.me wants the number bare — no +, spaces or dashes.
+// wa.me wants the number bare - no +, spaces or dashes.
 const WHATSAPP = "32496468041";
 
 export type Social = {

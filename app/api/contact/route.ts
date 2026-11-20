@@ -9,7 +9,7 @@ type Payload = {
   email?: string;
   type?: string;
   message?: string;
-  company?: string; // honeypot — see below
+  company?: string; // honeypot - see below
 };
 
 const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
@@ -22,7 +22,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
   }
 
-  // Honeypot: a hidden field real users never see. If it's filled, it's a bot —
+  // Honeypot: a hidden field real users never see. If it's filled, it's a bot -
   // answer 200 so the bot thinks it succeeded, but send nothing.
   if (data.company && data.company.trim()) {
     return NextResponse.json({ ok: true });
@@ -57,11 +57,11 @@ export async function POST(request: Request) {
       from,
       to,
       replyTo: email, // hit Reply in the inbox and it goes straight to the sender
-      subject: `New enquiry${type ? ` — ${type}` : ""} from ${name}`,
+      subject: `New enquiry${type ? ` - ${type}` : ""} from ${name}`,
       text: [
         `Name: ${name}`,
         `Email: ${email}`,
-        `Project type: ${type || "—"}`,
+        `Project type: ${type || "-"}`,
         "",
         message,
       ].join("\n"),

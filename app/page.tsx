@@ -19,32 +19,32 @@ export default function HomePage() {
     <>
       <Navbar />
       <main>
-        {/* Act 1 — kinetic name reveal (dark) */}
+        {/* Act 1 - kinetic name reveal (dark) */}
         <HeroName />
-        {/* Act 2 — scroll-driven camera reveal (white studio) */}
+        {/* Act 2 - scroll-driven camera reveal (white studio) */}
         <ScrollSequence />
-        {/* Act 3 — About: outline -> white fill on scroll (dark) */}
+        {/* Act 3 - About: outline -> white fill on scroll (dark) */}
         <AboutMe />
-        {/* Act 4 — Story: long-form bio + real photos (dark) */}
+        {/* Act 4 - Story: long-form bio + real photos (dark) */}
         <Story />
-        {/* Act 4b — Stills: masonry photo gallery + lightbox (white) */}
+        {/* Act 4b - Stills: masonry photo gallery + lightbox (white) */}
         <Stills />
-        {/* Act 5 — Work: video gallery + lightbox (dark) */}
+        {/* Act 5 - Work: video gallery + lightbox (dark) */}
         <Work />
-        {/* Act 6 — Services: accordion packages with stills (white) */}
+        {/* Act 6 - Services: accordion packages with stills (white) */}
         <Services />
-        {/* Act 7 — My Practice: scroll-driven workflow timeline (dark) */}
+        {/* Act 7 - My Practice: scroll-driven workflow timeline (dark) */}
         <Process />
-        {/* Act 8 — FAQ: two-column sticky accordion (white) */}
+        {/* Act 8 - FAQ: two-column sticky accordion (white) */}
         <FAQ />
-        {/* Act 9 — Testimonials: auto-advancing pull-quote carousel (dark) */}
+        {/* Act 9 - Testimonials: auto-advancing pull-quote carousel (dark) */}
         <Testimonials />
-        {/* Act 10 — Worked-with client logo marquee (dark band) */}
+        {/* Act 10 - Worked-with client logo marquee (dark band) */}
         <LogoMarquee />
-        {/* Act 11 — Contact: CTA + form (white) */}
+        {/* Act 11 - Contact: CTA + form (white) */}
         <Contact />
       </main>
-      {/* Floating social rail — reveals for the mid-page, hides over hero + footer */}
+      {/* Floating social rail - reveals for the mid-page, hides over hero + footer */}
       <SocialRail />
       {/* Footer (dark) */}
       <Footer />

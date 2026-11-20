@@ -5,7 +5,7 @@ import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { Plus, ArrowUpRight, Check } from "@phosphor-icons/react";
 import { useI18n } from "../i18n/I18nProvider";
 
-// Structural data only — images line up by index with t.services.items.
+// Structural data only - images line up by index with t.services.items.
 const SERVICE_IMAGES = [
   "/services/documentaries.jpg",
   "/services/real-estate.jpg",

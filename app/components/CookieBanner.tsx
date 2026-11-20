@@ -14,7 +14,7 @@ export function CookieBanner() {
     try {
       if (!localStorage.getItem(KEY)) setShow(true);
     } catch {
-      // localStorage unavailable — skip the banner rather than crash.
+      // localStorage unavailable - skip the banner rather than crash.
     }
   }, []);
 

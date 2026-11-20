@@ -29,7 +29,7 @@ export function HeroName() {
       data-nav-bg="dark"
       className="relative flex min-h-[100dvh] w-full flex-col items-center justify-center overflow-hidden bg-ink"
     >
-      {/* Background video — heavily darkened so the name stays the subject.
+      {/* Background video - heavily darkened so the name stays the subject.
           Reduced-motion users get the still poster instead of playback. */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         {reduce ? (
@@ -59,7 +59,7 @@ export function HeroName() {
         <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-b from-transparent to-ink" />
       </div>
 
-      {/* Ambient floor glow — the single accent, low and centered. */}
+      {/* Ambient floor glow - the single accent, low and centered. */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 bottom-[-20%] z-0 h-[70%]"
@@ -91,7 +91,7 @@ export function HeroName() {
           }
           className="relative px-4 will-change-transform"
         >
-          {/* Ghost copy — the dim type that sits in the dark. */}
+          {/* Ghost copy - the dim type that sits in the dark. */}
           <h1
             aria-label="Kramskoy Visuals"
             className="name-ghost select-none text-center font-display text-[15vw] font-extrabold leading-[0.82] tracking-[-0.04em] md:text-[13vw] lg:text-[168px]"
@@ -100,7 +100,7 @@ export function HeroName() {
             <span className="block">VISUALS</span>
           </h1>
 
-          {/* Fill copy — clip-wipes downward: KRAMSKOY white, VISUALS cyan. */}
+          {/* Fill copy - clip-wipes downward: KRAMSKOY white, VISUALS cyan. */}
           <motion.h1
             aria-hidden
             initial={reduce ? { clipPath: "inset(0 0 0% 0)" } : { clipPath: "inset(0 0 100% 0)" }}
@@ -169,7 +169,7 @@ function itemVariants(reduce: boolean | null): Variants {
 }
 
 /**
- * Portrait layer — disabled (see the commented-out usage in the hero above).
+ * Portrait layer - disabled (see the commented-out usage in the hero above).
  * Drop a transparent cutout PNG at `public/portrait.png` (Kramskoy, full/half
  * body, no background) and re-enable both this and its usage to bring it back.
  */

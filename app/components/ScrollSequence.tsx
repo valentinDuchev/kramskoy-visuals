@@ -12,7 +12,7 @@ const SECTION_BG = "#ffffff"; // white studio backdrop, matches the Kling render
 const SECTION_VH = 200; // section height in svh; sticky range = SECTION_VH - sticky height
 const SCROLL_DURATION_PCT = 110; // scroll length the frame animation plays across (shortened per client feedback: full reveal now takes ~1.5 scrolls on desktop instead of ~3)
 const ZOOM = 0.85; // contain-fit zoom; <1 leaves white margin, >1 crops
-const DARK_OVERLAY_MAX = 0; // no scrim — the studio frames are already clean
+const DARK_OVERLAY_MAX = 0; // no scrim - the studio frames are already clean
 const NAV_H = 72; // must match Navbar NAV_H
 
 // ─── Frame tracks (counts verified against ffmpeg output) ───────────────
@@ -33,7 +33,7 @@ const MOBILE_TRACK: Track = {
 // scrub. Layout lines up by index with t.camera.words.
 // Positions hug the four corners, steering clear of the centred camera: the
 // exploded lens fills the middle-left, so word 3 sits low-left below it. `at`
-// values are the timeline progress each word starts revealing at — kept early
+// values are the timeline progress each word starts revealing at - kept early
 // enough that even the last word finishes before the scrub ends (see below).
 const WORD_LAYOUT = [
   { pos: "left-[3vw] top-[9%] text-left", at: 0.06 },
@@ -201,7 +201,7 @@ export function ScrollSequence() {
       className="relative w-full"
       style={{ backgroundColor: SECTION_BG, height: `${SECTION_VH}svh` }}
     >
-      {/* Sticky canvas — CSS sticky, not GSAP pin. Sits below the navbar. */}
+      {/* Sticky canvas - CSS sticky, not GSAP pin. Sits below the navbar. */}
       <div
         className="sticky z-0 w-full"
         style={{ top: NAV_H, height: `calc(100svh - ${NAV_H}px)` }}
@@ -219,7 +219,7 @@ export function ScrollSequence() {
           className="pointer-events-none absolute inset-x-0 bottom-0 h-[16%] bg-gradient-to-t from-accent/15 to-transparent"
         />
 
-        {/* Craft words — pinned over the camera, built letter-by-letter
+        {/* Craft words - pinned over the camera, built letter-by-letter
             by the scrub. Each word's letters are staggered within its
             scroll window. */}
         <div ref={wordsRef} className="pointer-events-none absolute inset-0 z-10">
@@ -229,7 +229,7 @@ export function ScrollSequence() {
               aria-label={word}
               // Type is sized in vw (clamped) so each word stays a constant
               // fraction of the viewport and never spills past its side gutter
-              // onto the centered camera — regardless of width or language.
+              // onto the centered camera - regardless of width or language.
               // whitespace-nowrap keeps a long word (e.g. BG СВЕТЛИНА) on one
               // line so it can't wrap back over the frame. Oswald (--font-craft)
               // is condensed, so the long Cyrillic words stay narrow.

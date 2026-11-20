@@ -57,7 +57,7 @@ export function Story() {
           </div>
         </div>
 
-        {/* Photo column — two on-set stills, stacked and offset */}
+        {/* Photo column - two on-set stills, stacked and offset */}
         <div className="relative">
           <motion.div
             {...reveal(0.1)}

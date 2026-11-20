@@ -1,4 +1,4 @@
-// Bilingual copy for the marketing page. Bulgarian is a first-pass draft —
+// Bilingual copy for the marketing page. Bulgarian is a first-pass draft -
 // have a native speaker proof it. Brand names, project titles, gear, client
 // names, social handles and the email are intentionally not translated.
 //
@@ -36,7 +36,7 @@ export const en = {
     heading: "My Story",
     paragraphs: [
       "I graduated in Film, Television, and Video from LUCA School of Arts in Brussels in 2025. During my studies I made many short-form documentaries about people's lives and hobbies. Seeing the reactions of the people I filmed is exactly why I fell in love with this work. As a Christian, one of my principles is to bring joy to others, and I quickly realised that videography lets me do exactly that.",
-      "I'm based in Dobrich, Bulgaria, where I work with agro companies such as Bayer and Agredo, and as a video editor for Hevesh 5. But I'm not only active in Bulgaria — I'm behind every video published by the Dutch Domino Team. I work across Europe, and longer-distance travel is also possible.",
+      "I'm based in Dobrich, Bulgaria, where I work with agro companies such as Bayer and Agredo, and as a video editor for Hevesh 5. But I'm not only active in Bulgaria - I'm behind every video published by the Dutch Domino Team. I work across Europe, and longer-distance travel is also possible.",
       "What I truly care about is telling your story in the best possible way: understanding the roots of your ideas and why you do what you do, then capturing that passion and emotion in the final video. That's why it matters so much to me to understand the person I'm working with, so they feel comfortable sharing their story with the world.",
     ],
     closing: "Let's create the best possible video for you, together.",
@@ -48,7 +48,7 @@ export const en = {
     close: "Close photo",
     prev: "Previous photo",
     next: "Next photo",
-    // Alt text — lines up by index with STILLS in Stills.tsx.
+    // Alt text - lines up by index with STILLS in Stills.tsx.
     alts: [
       "Ivan on set with his camera, giving a thumbs up",
       "Ivan filming on a gimbal",
@@ -132,7 +132,7 @@ export const en = {
       {
         tag: "Delivery",
         title: "Delivery",
-        body: "You receive the final video in the formats you need — web, social, or broadcast — optimized for your platforms, with easy-to-download files.",
+        body: "You receive the final video in the formats you need - web, social, or broadcast - optimized for your platforms, with easy-to-download files.",
       },
     ],
   },
@@ -248,7 +248,7 @@ export const en = {
   // Legal copy. Bodies use a tiny markdown subset rendered by renderRich in
   // LegalPage.tsx: [label](href) for links and **word** for bold. Bracketed
   // [notes like this] are placeholders for the owner to fill in / confirm with
-  // a professional — keep them in both languages so nothing is silently lost.
+  // a professional - keep them in both languages so nothing is silently lost.
   legal: {
     backHome: "← Back home",
     lastUpdated: "Last updated:",
@@ -387,7 +387,7 @@ export const bg: Dict = {
     heading: "Моята история",
     paragraphs: [
       "Завърших „Филм, телевизия и видео“ в LUCA School of Arts в Брюксел през 2025 г. По време на следването си направих много късометражни документални филми за живота и хобитата на хората. Реакциите на хората, които снимах, са точно причината да се влюбя в тази работа. Като християнин, един от принципите ми е да нося радост на другите, и бързо осъзнах, че видеографията ми позволява да правя точно това.",
-      "Базиран съм в Добрич, България, където работя с агро компании като Bayer и Agredo, както и като видео монтажист за Hevesh 5. Но не съм активен само в България — зад всяко видео на нидерландския Dutch Domino Team стоя аз. Работя из цяла Европа, а по-далечни пътувания също са възможни.",
+      "Базиран съм в Добрич, България, където работя с агро компании като Bayer и Agredo, както и като видео монтажист за Hevesh 5. Но не съм активен само в България - зад всяко видео на нидерландския Dutch Domino Team стоя аз. Работя из цяла Европа, а по-далечни пътувания също са възможни.",
       "Това, което истински ме вълнува, е да разкажа твоята история по възможно най-добрия начин: да разбера корените на идеите ти и защо правиш това, което правиш, и после да уловя тази страст и емоция във финалното видео. Затова е толкова важно за мен да разбера човека, с когото работя, за да се чувства спокоен да сподели историята си със света.",
     ],
     closing: "Нека създадем възможно най-доброто видео за теб, заедно.",
@@ -481,7 +481,7 @@ export const bg: Dict = {
       {
         tag: "Предаване",
         title: "Предаване",
-        body: "Получаваш финалното видео във форматите, от които имаш нужда — уеб, социални мрежи или излъчване — оптимизирано за твоите платформи и лесно за сваляне.",
+        body: "Получаваш финалното видео във форматите, от които имаш нужда - уеб, социални мрежи или излъчване - оптимизирано за твоите платформи и лесно за сваляне.",
       },
     ],
   },

@@ -20,7 +20,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
       if (stored === "en" || stored === "bg") next = stored;
       else if (navigator.language?.toLowerCase().startsWith("bg")) next = "bg";
     } catch {
-      // ignore — keep English
+      // ignore - keep English
     }
     if (next !== "en") setLocaleState(next);
     document.documentElement.lang = next;

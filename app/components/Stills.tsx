@@ -11,7 +11,7 @@ import { useI18n } from "../i18n/I18nProvider";
  * - sm/md: 2 columns of 4:3 tiles, the portrait spanning two rows
  * - lg: 3 columns x 6 rows, the portrait as the tall centre column
  * Click opens a lightbox with arrow-key / button navigation.
- * Structural data only — alt text lives in t.stills.alts, lined up by index.
+ * Structural data only - alt text lives in t.stills.alts, lined up by index.
  */
 type Still = { src: string; w: number; h: number; cell: string };
 

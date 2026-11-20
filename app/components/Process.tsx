@@ -53,7 +53,7 @@ export function Process() {
               {...reveal(i * 0.04)}
               className="relative grid gap-3 pb-14 pl-12 last:pb-0 md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] md:gap-12 md:pb-24 md:pl-24"
             >
-              {/* Node — lights up as it enters view */}
+              {/* Node - lights up as it enters view */}
               <motion.span
                 aria-hidden
                 initial={{ backgroundColor: reduce ? "#5ba8ff" : "rgba(255,255,255,0.25)" }}

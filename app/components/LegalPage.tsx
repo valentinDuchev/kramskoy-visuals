@@ -10,7 +10,7 @@ type Doc = "privacy" | "terms" | "cookies";
 /**
  * Renders the tiny markdown subset used in legal bodies:
  *   [label](href)  → link   **word** → bold
- * Anything else passes through as plain text. Kept intentionally small — this
+ * Anything else passes through as plain text. Kept intentionally small - this
  * is for first-party copy in the dictionary, not arbitrary user input.
  */
 function renderRich(text: string): React.ReactNode[] {

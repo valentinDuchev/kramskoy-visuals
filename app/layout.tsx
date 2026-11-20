@@ -26,7 +26,7 @@ const sora = Sora({
   weight: ["600", "700", "800"],
 });
 
-// Matches the logo wordmark — used for the brand lockup in the navbar.
+// Matches the logo wordmark - used for the brand lockup in the navbar.
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
@@ -42,12 +42,12 @@ const oswald = Oswald({
 });
 
 const DESCRIPTION =
-  "Kramskoy Visuals — cinematic videography and photography by Ivan. Brand films, documentaries, music videos, weddings, events, and portraits, shot, color-graded, and edited in-house. Based in Bulgaria, available for travel.";
+  "Kramskoy Visuals - cinematic videography and photography by Ivan. Brand films, documentaries, music videos, weddings, events, and portraits, shot, color-graded, and edited in-house. Based in Bulgaria, available for travel.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Kramskoy Visuals — Videographer & Photographer",
+    default: "Kramskoy Visuals | Videographer & Photographer",
     template: "%s | Kramskoy Visuals",
   },
   description: DESCRIPTION,
@@ -110,20 +110,20 @@ export const metadata: Metadata = {
     alternateLocale: "bg_BG",
     url: "/",
     siteName: "Kramskoy Visuals",
-    title: "Kramskoy Visuals — Cinematic Videography & Photography",
+    title: "Kramskoy Visuals | Cinematic Videography & Photography",
     description: DESCRIPTION,
     images: [
       {
         url: "/hero_poster.jpg",
         width: 1920,
         height: 1080,
-        alt: "Kramskoy Visuals — cinematic videography and photography",
+        alt: "Kramskoy Visuals - cinematic videography and photography",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kramskoy Visuals — Cinematic Videography & Photography",
+    title: "Kramskoy Visuals | Cinematic Videography & Photography",
     description: DESCRIPTION,
     images: ["/hero_poster.jpg"],
   },
@@ -145,7 +145,7 @@ export const viewport: Viewport = {
   colorScheme: "dark",
 };
 
-// Structured data — helps search engines understand the business and can drive
+// Structured data - helps search engines understand the business and can drive
 // rich results. Mirrors the on-page content (services, area served, socials).
 const jsonLd = {
   "@context": "https://schema.org",

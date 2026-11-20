@@ -66,7 +66,7 @@ body {
   paint-order: stroke fill;
 }
 
-/* Client logo marquee — track holds the list twice; -50% loops seamlessly */
+/* Client logo marquee - track holds the list twice; -50% loops seamlessly */
 @keyframes kv-marquee {
   from {
     transform: translateX(0);

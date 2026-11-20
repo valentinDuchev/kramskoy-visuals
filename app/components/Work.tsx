@@ -6,7 +6,7 @@ import { Play, X } from "@phosphor-icons/react";
 import { useI18n } from "../i18n/I18nProvider";
 
 /**
- * Structural data only — same across languages. The translated bits
+ * Structural data only - same across languages. The translated bits
  * (category, hover meta) live in the dictionary and line up by index.
  * To go live, replace WORK with an API result of the same shape.
  */
@@ -23,7 +23,7 @@ const ytThumb = (id: string) => `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`
 const WORK: WorkItem[] = [
   {
     id: "w1",
-    title: "One Million Ahead — WDC 2024",
+    title: "One Million Ahead - WDC 2024",
     youtubeId: "m5VtyttodNg",
     span: "md:col-span-2 lg:col-span-12",
   },
@@ -132,7 +132,7 @@ function WorkCard({
         className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-ink/75 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
       />
 
-      {/* Tech / credits line — reveals on hover */}
+      {/* Tech / credits line - reveals on hover */}
       <div className="absolute inset-x-0 top-0 -translate-y-2 p-5 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
         <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/85">
           {meta.join("  /  ")}
@@ -140,7 +140,7 @@ function WorkCard({
         <div className="mt-3 h-px w-full origin-left scale-x-0 bg-white/30 transition-transform delay-100 duration-700 ease-out group-hover:scale-x-100" />
       </div>
 
-      {/* Play button — expands into a WATCH pill on hover */}
+      {/* Play button - expands into a WATCH pill on hover */}
       <div className="absolute inset-0 flex items-center justify-center">
         <span className="flex items-center rounded-full border border-white/30 bg-white/10 backdrop-blur-md transition-all duration-500 group-hover:border-white group-hover:bg-white/20">
           <span className="grid h-16 w-16 place-items-center">

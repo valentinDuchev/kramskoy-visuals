@@ -32,7 +32,7 @@ export function Footer() {
           </a>
         </div>
 
-        {/* Social rows — sized off the wordmark above so the two read as one
+        {/* Social rows - sized off the wordmark above so the two read as one
             block. Each row is a full-width target, which is also what makes
             the WhatsApp and email rows comfortable to tap on a phone. */}
         <div className="pt-10">
@@ -44,7 +44,7 @@ export function Footer() {
               key={label}
               href={href}
               {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
-              aria-label={`${label} — ${handle}`}
+              aria-label={`${label} - ${handle}`}
               className="group flex items-center justify-between gap-6 border-b border-white/10 py-5 transition-colors hover:bg-white/[0.03] md:py-6"
             >
               <span className="flex min-w-0 items-center gap-4 md:gap-6">
@@ -57,7 +57,7 @@ export function Footer() {
                 </span>
               </span>
               <span className="flex shrink-0 items-center gap-4">
-                {/* Handles are supporting detail — dropped on the narrowest
+                {/* Handles are supporting detail - dropped on the narrowest
                     screens rather than allowed to squeeze the platform name. */}
                 <span className="hidden text-sm text-white/35 transition-colors group-hover:text-white/60 sm:block">
                   {handle}
@@ -100,12 +100,12 @@ export function Footer() {
         <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-4 border-t border-white/10 pt-8 text-[12px] uppercase tracking-[0.14em] text-white/40">
           <span>© 2026 Kramskoy Visuals</span>
 
-          {/* Agency credit — dark logo sits on a light pill so it stays legible. */}
+          {/* Agency credit - dark logo sits on a light pill so it stays legible. */}
           <a
             href="https://invenios.dev"
             target="_blank"
             rel="noreferrer"
-            aria-label="Powered by Invenios — invenios.dev"
+            aria-label="Powered by Invenios - invenios.dev"
             className="group order-last inline-flex w-full items-center justify-center gap-3 normal-case tracking-normal text-white/45 transition-colors hover:text-white/80 sm:order-none sm:w-auto"
           >
             <span className="text-[15px] font-medium md:text-base">Powered by</span>
